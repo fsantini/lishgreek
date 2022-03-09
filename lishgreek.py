@@ -40,6 +40,7 @@ And it is redistributable under a CC-BY-SA-4.0 license.
 """
 
 import json
+import gzip
 
 greek_accented   = 'ά έ ή ί ΐ ό ύ ΰ ώ'
 greek_unaccented = 'α ε η ι ϊ ο υ ϋ ω'
@@ -241,12 +242,12 @@ def build_g_uglish_dict():
                     uglish_dict[uglish_word] = []
                 uglish_dict[uglish_word].append(word)
     print('Done')
-    with open('uglish-dict.json', 'w', encoding='utf-8') as f:
+    with gzip.open('uglish-dict.json.gz', 'wt', encoding='utf-8') as f:
         json.dump(uglish_dict, f)
     return uglish_dict
             
 def load_g_uglish_dict():
-    with open('uglish-dict.json', 'r', encoding='utf-8') as f:
+    with gzip.open('uglish-dict.json.gz', 'rt', encoding='utf-8') as f:
         uglish_dict = json.load(f)
     return uglish_dict
         
