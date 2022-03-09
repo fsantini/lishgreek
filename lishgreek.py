@@ -143,15 +143,15 @@ lat_accent_dictionary = make_dictionary_from_strings(lat_accented, lat_unaccente
 l2u_dict = make_dictionary_from_strings(lish_trigraph + lish_digraph + lish_monograph, l_uglish_trigraph + l_uglish_digraph + l_uglish_monograph)
 
 def is_greek_letter(char):
-    alphabet = greek_monograph
-    if char in alphabet:
+    alphabet = greek_monograph + ' ' + greek_accented
+    if char in alphabet and char != ' ':
         return True
     else:
         return False
 
 def is_latin_letter(char):
-    alphabet = lish_monograph
-    if char in alphabet:
+    alphabet = lish_monograph + ' ' + lat_accented
+    if char in alphabet and char != ' ':
         return True
     else:
         return False
@@ -358,8 +358,7 @@ def translate_text(text):
     word = ''
     text_out = ''
     for char in text:
-        #print(char, is_latin_letter(char.lower()))
-        if not is_latin_letter(char.lower()) or char == ' ':
+        if not is_latin_letter(char.lower()):
             if word:
                 text_out += guess(word) + char
                 word = ''
