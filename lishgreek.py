@@ -224,7 +224,7 @@ def build_g_uglish_dict():
     line_number=1
     # this is already a list in order of frequency. The corresponding dictionary is ordered
     #with open('el-utf8_reduced.wl', 'r', encoding='utf-8') as f:
-    with open('el_full.txt', 'r', encoding='utf-8') as f:
+    with open('el_merged-utf8.txt', 'r', encoding='utf-8') as f:
         for line in f:
             word = line.split()[0]
             word = word.strip()
