@@ -129,8 +129,8 @@ l_uglish_trigraph = 'H   '
 lish_digraph     = 'ai au af av ay ch ei eu ef ev ey gg gk ks ng nk mp mb mv nt nd oi ou ps th '
 l_uglish_digraph = 'e  A  A  A  A  x  i  E  E  E  E  G  G  3  G  G  b  bV V  d  d  i  u  4  8  '
 
-lish_monograph     = 'a b  c d e f g h  i j k l m n o p q r s t u v w x  y z '
-l_uglish_monograph = 'a bv s d e f g xi i 3 k l m n o p q r s t i v o 3x i z '
+lish_monograph     = 'a b  c d e f g h  i j k l m n o p q r s t u v w x  y z 3 8 9 4 '
+l_uglish_monograph = 'a bv s d e f g xi i 3 k l m n o p q r s t i v o 3x i z 3 8 8 4 '
 
 tiebreaker_tokens_lish  = 'y u h ai au ay ei eu ey oi ou mv'
 tiebreaker_tokens_greek = 'υ υ η αι αυ αυ ει ευ ευ οι ου μβ'
